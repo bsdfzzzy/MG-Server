@@ -1,6 +1,6 @@
 ##Base
-	* Date 日期 Date
-	* System 系统 String
+  * Date 日期 Date
+  * System 系统 String
 	    - `FOUR_DMZ`: 四楼DMZ区巡检
 	    - `FOUR_NORMAL`: 四楼日常巡检
 	    - `FIVE_ONE`: 5-1系统巡检
