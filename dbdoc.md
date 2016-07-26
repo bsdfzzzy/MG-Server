@@ -13,7 +13,7 @@
 	        - `AVID`: AVID系统巡检
 	    - `TV`: 电视剧缩编巡检
  	* Subsystem 系统子项目 String
- 	    - `STORAGE`: 
+ 	    * `STORAGE`: 
  	    - `SERVER`: 
  	    - `SWITCH`: 
  	    - ``
