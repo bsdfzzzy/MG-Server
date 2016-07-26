@@ -5,7 +5,7 @@
 	    - `FOUR_NORMAL`: 四楼日常巡检
 	    - `FIVE_ONE`: 5-1系统巡检
 	    - `FIVE_TWO`: 5-2系统巡检
-	    - `FIVE_THREE`: 5-3系统巡检
+	    - `FIVE_THREE` : 5-3系统巡检
 	    - `SIX_MDC`: 六楼MDC巡检
 	    - `SIX_BIZ`: 六楼业务巡检
 	    - `EIGHT`: 八楼系统巡检
