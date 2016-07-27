@@ -6,6 +6,7 @@
     - `1`: 
     - `2`: 
     - `3`: 
+  * Registe-time Date
 
 ##Base
   * Date 日期 Date
