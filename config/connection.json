@@ -1,0 +1,7 @@
+{
+    database: 'manage',
+    username: 'root',
+    password: '',
+    host: 'localhost',
+    dialect: 'mysql'
+}

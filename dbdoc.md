@@ -1,3 +1,12 @@
+##User
+  * Account String
+  * Username String
+  * Password String
+  * Priority Number
+    - `1`: 
+    - `2`: 
+    - `3`: 
+
 ##Base
   * Date 日期 Date
   * System 系统 String
