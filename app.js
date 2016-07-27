@@ -1,5 +1,15 @@
-const Koa = require('koa');
+import Koa from 'koa';
+import router_ from 'koa-router';
 const app = new Koa();
+const router = router_();
+import views from 'koa-views';
+import co from 'co';
+import convert from 'koa-convert';
+import json from 'koa-json';
+import onerror from 'koa-onerror';
+import bodyparser from 'koa-bodyparser';
+import logger from 'koa-logger';
+/*const Koa = require('koa');
 const router = require('koa-router')();
 const views = require('koa-views');
 const co = require('co');
@@ -7,7 +17,8 @@ const convert = require('koa-convert');
 const json = require('koa-json');
 const onerror = require('koa-onerror');
 const bodyparser = require('koa-bodyparser')();
-const logger = require('koa-logger');
+const logger = require('koa-logger');*/
+const db = require('./models');
 
 const index = require('./routes/index');
 const users = require('./routes/users');

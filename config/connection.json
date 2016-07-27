@@ -1,7 +1,16 @@
 {
-    database: 'manage',
-    username: 'root',
-    password: '',
-    host: 'localhost',
-    dialect: 'mysql'
+    "development": {
+        "database": "manage",
+        "username": "root",
+        "password": "",
+        "host": "localhost",
+        "dialect": "mysql",
+        "port": 3306,
+        "maxConcurrentQueries": 100,
+        "pool": {
+            "maxConnections": 5,
+            "maxIdleTime": 30
+        },
+        "language": "en"
+    }
 }
