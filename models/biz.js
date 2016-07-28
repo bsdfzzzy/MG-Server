@@ -1,5 +1,5 @@
 export default (sequelize, DataTypes) => {
-    let Biz = sequelize.define("Biz", {
+    let Biz = sequelize.define("bizs", {
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
@@ -7,53 +7,33 @@ export default (sequelize, DataTypes) => {
         },
         system: {
             type: DataTypes.STRING,
-            validate: {
-                notNull: true,
-                notEmpty: true,
-            }
+            allowNull: false,
         },
         column: {
             type: DataTypes.STRING,
-            validate: {
-                notNull: true,
-                notEmpty: true,
-            }
+            allowNull: false,
         },
         playStart: {
             type: DataTypes.TIME,
-            validate: {
-                notNull: true,
-                notEmpty: true,
-            }
+            allowNull: false,
         },
         playFinish: {
             type: DataTypes.TIME,
-            validate: {
-                notNull: true,
-                notEmpty: true,
-            }
+            allowNull: false,
         },
         numOfNeeds: {
             type: DataTypes.INTEGER,
-            validate: {
-                notNull: true,
-                notEmpty: true,
-            }
+            allowNull: false,
         },
         allReadyTime: {
             type: DataTypes.TIME,
-            validate: {
-                notNull: true,
-                notEmpty: true,
-            }
+            allowNull: false,
         },
         state: {
             type: DataTypes.BOOLEAN,
-            validate: {
-                notNull: true,
-                notEmpty: true,
-            }
+            allowNull: false,
         }
-    },{});
+    },{
+    });
     return Biz;
 }

@@ -4,7 +4,7 @@ router.get('/', async function (ctx, next) {
   ctx.state = {
     title: 'koa2 title'
   };
-
+  console.log(ctx);
   await ctx.render('index', {
   });
 })

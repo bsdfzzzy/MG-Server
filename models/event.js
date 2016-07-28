@@ -1,5 +1,5 @@
 export default (sequelize, DataTypes) => {
-    let Event = sequelize.define("Event", {
+    let Event = sequelize.define("events", {
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
@@ -7,25 +7,20 @@ export default (sequelize, DataTypes) => {
         },
         date: {
             type: DataTypes.DATEONLY,
-            validate: {
-                notNull: true,
-                notEmpty: true,
-            }
+            defaultValue: DataTypes.NOW, 
+            allowNull: false,
         },
         system: {
             type: DataTypes.STRING,
-            validate: {
-                notNull: true,
-                notEmpty: true,
-            }
+            allowNull: false,
         },
         event: {
             type: DataTypes.STRING,
-            validate: {
-                notNull: true,
-                notEmpty: true,
-            }
+            allowNull: false,
         }
-    }, {});
+    }, {
+        createdAt: false,
+        updatedAt:false,
+    });
     return Event;
 }

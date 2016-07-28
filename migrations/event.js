@@ -2,7 +2,7 @@
 
 module.exports = {
     up: (queryInterface, Sequelize) => {
-        queryInterface.createTable('User', {
+        queryInterface.createTable('events', {
             id: {
             type: Sequelize.INTEGER,
             primaryKey: true,
@@ -10,27 +10,18 @@ module.exports = {
         },
         date: {
             type: Sequelize.DATEONLY,
-            validate: {
-                notNull: true,
-                notEmpty: true,
-            }
+            allowNull: false,
         },
         system: {
             type: Sequelize.STRING,
-            validate: {
-                notNull: true,
-                notEmpty: true,
-            }
+            allowNull: false,
         },
         event: {
             type: Sequelize.STRING,
-            validate: {
-                notNull: true,
-                notEmpty: true,
-            }
+            allowNull: false,
         }
     },{
-            charset: 'utf8'
+        charset: 'utf8'
         }
     )}
 };

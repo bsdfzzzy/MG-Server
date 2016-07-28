@@ -1,5 +1,5 @@
 export default (sequelize, DataTypes) => {
-    let User = sequelize.define("User", {
+    let User = sequelize.define("users", {
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
@@ -8,45 +8,22 @@ export default (sequelize, DataTypes) => {
         account: {
             type: DataTypes.STRING,
             unique: true,
-            validate: {
-                notNull: true,
-                notEmpty: true,
-            }
+            allowNull: false,
         },
         username: {
             type: DataTypes.STRING,
-            validate: {
-                notNull: true,
-                notEmpty: true,
-            }
+            allowNull: false,
         },
         password: {
             type: DataTypes.STRING,
-            validate: {
-                notNull: true,
-                notEmpty: true,
-            }
+            allowNull: false,
         },
         priority: {
             type: DataTypes.STRING,
-            validate: {
-                notNull: true,
-                notEmpty: true,
-            }
-        },
-        time: {
-            type: DataTypes.NOW,
-            validate: {
-                notNull: true,
-                notEmpty: true,
-            }
+            allowNull: false,
         }
     }, {
-        classMethods: {
-            associate: models => {
-                User.hasMany(models.Task);
-            }
-        }
+        timestamps: true,
     });
     return User;
 }

@@ -1,5 +1,5 @@
 export default (sequelize, DataTypes) => {
-    let Base = sequelize.define("Base", {
+    let Base = sequelize.define("bases", {
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
@@ -7,24 +7,15 @@ export default (sequelize, DataTypes) => {
         },
         date: {
             type: DataTypes.DATEONLY,
-            validate: {
-                notNull: true,
-                notEmpty: true,
-            }
+            allowNull: false,
         },
         system: {
             type: DataTypes.STRING,
-            validate: {
-                notNull: true,
-                notEmpty: true,
-            }
+            allowNull: false,
         },
         subsystem: {
             type: DataTypes.STRING,
-            validate: {
-                notNull: true,
-                notEmpty: true,
-            }
+            allowNull: false,
         },
         supervisor_1: DataTypes.STRING,
         supervisor_2: DataTypes.STRING,
@@ -33,22 +24,17 @@ export default (sequelize, DataTypes) => {
         experiment: DataTypes.STRING,
         IP: {
             type: DataTypes.STRING,
-            validate: {
-                notNull: true,
-                notEmpty: true,
-            }
+            allowNull: false,
         },
         type: {
             type: DataTypes.STRING,
-            validate: {
-                notNull: true,
-                notEmpty: true,
-            }
+            allowNull: false,
         },
         work: DataTypes.TEXT,
         category: DataTypes.STRING,
         stateOrData: DataTypes.STRING,
         More: DataTypes.STRING
-    }, {});
+    }, {
+    });
     return Base;
 }

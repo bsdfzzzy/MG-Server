@@ -1,4 +1,4 @@
-import Koa from 'koa';
+/*import Koa from 'koa';
 import router_ from 'koa-router';
 const app = new Koa();
 const router = router_();
@@ -8,8 +8,8 @@ import convert from 'koa-convert';
 import json from 'koa-json';
 import onerror from 'koa-onerror';
 import bodyparser from 'koa-bodyparser';
-import logger from 'koa-logger';
-/*const Koa = require('koa');
+import logger from 'koa-logger';*/
+const Koa = require('koa');
 const router = require('koa-router')();
 const views = require('koa-views');
 const co = require('co');
@@ -17,11 +17,15 @@ const convert = require('koa-convert');
 const json = require('koa-json');
 const onerror = require('koa-onerror');
 const bodyparser = require('koa-bodyparser')();
-const logger = require('koa-logger');*/
-const db = require('./models');
+const logger = require('koa-logger');
+const app = new Koa();
+const db = require('./models/index');
 
 const index = require('./routes/index');
-const users = require('./routes/users');
+const users = require('./src/api/userApi');
+const events = require('./src/api/eventApi');
+const bizs = require('./src/api/bizApi');
+const bases = require('./src/api/baseApi');
 
 // middlewares
 app.use(convert(bodyparser));
@@ -43,6 +47,9 @@ app.use(async (ctx, next) => {
 
 router.use('/', index.routes(), index.allowedMethods());
 router.use('/users', users.routes(), users.allowedMethods());
+router.use('/events', events.routes(), events.allowedMethods());
+router.use('/bizs', bizs.routes(), bizs.allowedMethods());
+router.use('/bases', bases.routes(), bases.allowedMethods());
 
 app.use(router.routes(), router.allowedMethods());
 // response

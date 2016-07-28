@@ -2,7 +2,7 @@
 
 module.exports = {
     up: (queryInterface, Sequelize) => {
-        queryInterface.createTable('User', {
+        queryInterface.createTable('bizs', {
             id: {
             type: Sequelize.INTEGER,
             primaryKey: true,
@@ -10,52 +10,31 @@ module.exports = {
         },
         system: {
             type: Sequelize.STRING,
-            validate: {
-                notNull: true,
-                notEmpty: true,
-            }
+            allowNull: false,
         },
         column: {
             type: Sequelize.STRING,
-            validate: {
-                notNull: true,
-                notEmpty: true,
-            }
+            allowNull: false,
         },
         playStart: {
             type: Sequelize.TIME,
-            validate: {
-                notNull: true,
-                notEmpty: true,
-            }
+            allowNull: false,
         },
         playFinish: {
             type: Sequelize.TIME,
-            validate: {
-                notNull: true,
-                notEmpty: true,
-            }
+            allowNull: false,
         },
         numOfNeeds: {
             type: Sequelize.INTEGER,
-            validate: {
-                notNull: true,
-                notEmpty: true,
-            }
+            allowNull: false,
         },
         allReadyTime: {
             type: Sequelize.TIME,
-            validate: {
-                notNull: true,
-                notEmpty: true,
-            }
+            allowNull: false,
         },
         state: {
             type: Sequelize.BOOLEAN,
-            validate: {
-                notNull: true,
-                notEmpty: true,
-            }
+            allowNull: false,
         }
         },{
             charset: 'utf8'

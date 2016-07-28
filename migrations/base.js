@@ -2,7 +2,7 @@
 
 module.exports = {
     up: (queryInterface, Sequelize) => {
-        queryInterface.createTable('User', {
+        queryInterface.createTable('bases', {
             id: {
             type: Sequelize.INTEGER,
             primaryKey: true,
@@ -10,24 +10,15 @@ module.exports = {
         },
         date: {
             type: Sequelize.DATEONLY,
-            validate: {
-                notNull: true,
-                notEmpty: true,
-            }
+            allowNull: false,
         },
         system: {
             type: Sequelize.STRING,
-            validate: {
-                notNull: true,
-                notEmpty: true,
-            }
+            allowNull: false,
         },
         subsystem: {
             type: Sequelize.STRING,
-            validate: {
-                notNull: true,
-                notEmpty: true,
-            }
+            allowNull: false,
         },
         supervisor_1: Sequelize.STRING,
         supervisor_2: Sequelize.STRING,
@@ -36,17 +27,11 @@ module.exports = {
         experiment: Sequelize.STRING,
         IP: {
             type: Sequelize.STRING,
-            validate: {
-                notNull: true,
-                notEmpty: true,
-            }
+            allowNull: false,
         },
         type: {
             type: Sequelize.STRING,
-            validate: {
-                notNull: true,
-                notEmpty: true,
-            }
+            allowNull: false,
         },
         work: Sequelize.TEXT,
         category: Sequelize.STRING,

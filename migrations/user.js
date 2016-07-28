@@ -2,7 +2,7 @@
 
 module.exports = {
     up: (queryInterface, Sequelize) => {
-        queryInterface.createTable('User', {
+        queryInterface.createTable('users', {
             id: {
                 type: Sequelize.INTEGER,
                 primaryKey: true,
@@ -11,39 +11,28 @@ module.exports = {
             account: {
                 type: Sequelize.STRING,
                 unique: true,
-                validate: {
-                    notNull: true,
-                    notEmpty: true,
-                }
+                allowNull: false
             },
             username: {
                 type: Sequelize.STRING,
-                validate: {
-                    notNull: true,
-                    notEmpty: true,
-                }
+                allowNull: false
             },
             password: {
                 type: Sequelize.STRING,
-                validate: {
-                    notNull: true,
-                    notEmpty: true,
-                }
+                allowNull: false
             },
             priority: {
                 type: Sequelize.STRING,
-                validate: {
-                    notNull: true,
-                    notEmpty: true,
-                }
+                allowNull: false
             },
-            time: {
+            createdAt: {
                 type: Sequelize.DATE,
-                validate: {
-                    notNull: true,
-                    notEmpty: true,
-                }
-            }
+                defaultValue: Sequelize.NOW
+            },
+            updatedAt: {
+                type: Sequelize.DATE,
+                defaultValue: Sequelize.NOW,
+            },
         },{
             charset: 'utf8'
         }
